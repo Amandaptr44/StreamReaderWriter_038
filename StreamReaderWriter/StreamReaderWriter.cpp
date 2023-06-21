@@ -21,7 +21,15 @@ int main() {
 		//loop akan berhenti jika anda memasukkan karakter q
 		if (baris == "q") break;
 		//menulis dan memasukkan nilai dari 'baris' ke dalam file
-		outfile.close();
-
+		outfile << baris << endl;
 	}
+	//selesai dalam menulis sekarang tutup filenya
+	outfile.close();
+
+	//membuka file dalam mode membaca
+	ifstream infile;
+	//menunjukkan ke sebuah file
+	infile.open("contohfile.txt");
+
+	cout << endl << ">= Membuka dan membaca file " << endl;
 }
